@@ -13,11 +13,13 @@ const cameraGear = [
   
   function calculateTotalPrice(shoppingCart) {
     // Din kod här:
- 
+    return shoppingCart.reduce(function(total, cameraGear) {
+      return total + cameraGear.price;
+    },0);
 
   }
   
 
   // Test
-  // console.log(calculateTotalPrice(cameraGear)); // Ska logga: 550
+  //console.log(calculateTotalPrice(cameraGear)); // Ska logga: 550
   

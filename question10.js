@@ -5,3 +5,7 @@
 // 3) Registrera en kurs per student (registerCourse).
 // 4) Logga studenternas kurser (listCourses()) och kursinfo (getCourseInfo()).
 
+import { Student, Course} from "./question9.js";
+const student2 = new Student("Maria");
+const student3 = new Student ("Luisa");
+

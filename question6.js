@@ -10,6 +10,13 @@ const tweets = [
   ];
 
 // Din kod här:
+fuction updateTweets(text) {
+    return text.filter (function (tweets) {
+        return tweets.text;
+    });
+}
+
+
 
 
 // 6.2 (2p) 
@@ -19,7 +26,13 @@ const tweets = [
 // Visa  listan med tweets på sidan inuti <ul id="tweets"></ul>  
 
 // Din kod här:
-
+function tweetsHtml (tweets) {
+    const listEl = document.getElementById("tweets");
+    const list = tweets.map ((tweet) => {
+        return `<li> ${tweet.
+        }}`
+    })
+}
 
 
 
@@ -27,7 +40,7 @@ const tweets = [
 
 
 // Test
-//console.log(updatedTweets); // Ska logga en array utan kommentaren med id 823423
+console.log(updatedTweets); // Ska logga en array utan kommentaren med id 823423
 // [
 //   { text: 'Elon Musk is ...', id: 523423 },
 //   { text: 'The future of AI ...', id: 2039842 },

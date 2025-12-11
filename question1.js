@@ -10,8 +10,9 @@ const car = {
 
 function addIsFast(car) {
   // Din kod här:
+   return {... car, isFast: car.speed > 100} 
+  };
 
-}
 
 
 

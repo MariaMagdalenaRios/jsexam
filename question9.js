@@ -12,5 +12,17 @@
 //  - metoder:
 //    getCourseInfo()          -> t.ex. "JavaScript 20 yhp"
 
+class Student {
+	constructor(fullname, courses) {
+		this.fullname = [];
+		this.courses = [] ;
+	}
+}
 
+class Course {
+	constructor(name, yhp) {
 
+	this.name = 
+	this.yhp =
+}
+}
