@@ -13,16 +13,28 @@
 //    getCourseInfo()          -> t.ex. "JavaScript 20 yhp"
 
 class Student {
-	constructor(fullname, courses) {
-		this.fullname = [];
+	constructor(fullname) {
+		this.fullname = fullname;
 		this.courses = [] ;
 	}
-}
 
+// Add a course object to the courses array
+  	registerCourse(course) {
+    	this.courses.push(course);
+	}
+	// Return the list of courses
+  listCourses() {
+    return this.courses;
+  }
+}
 class Course {
 	constructor(name, yhp) {
 
-	this.name = 
-	this.yhp =
+	this.name = name;
+	this.yhp = yhp;
 }
+	// Return info as string: "JavaScript 20 yhp"
+  	getCourseInfo() {
+    	return `${this.name} ${this.yhp} yhp`;
+    }
 }

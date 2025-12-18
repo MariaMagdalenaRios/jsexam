@@ -19,10 +19,10 @@ const authors = [
     { first: 'Alexandr', last: 'Blok', year: 1880, passed: 1921 }
   ];
 
-function getAuthorsByFullname(authors) {
+function getAuthorsByFullname(author) {
     // Din kod här
-    const first = authors.first;
-    const last = authors.last;
+    const first = author.first;
+    const last = author.last;
     return `${first} ${last}`;
   };
 const fullName = authors.map(getAuthorsByFullname);

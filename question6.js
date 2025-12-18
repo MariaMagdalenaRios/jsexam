@@ -10,12 +10,12 @@ const tweets = [
   ];
 
 // Din kod här:
-fuction updateTweets(text) {
-    return text.filter (function (tweets) {
-        return tweets.text;
+function updateTweets(tweets) {
+    return tweets.filter (function (tweet) {
+        return tweets.id !== 823423;
     });
 }
-
+const updatedTweets = updateTweets(tweets);
 
 
 
@@ -29,18 +29,16 @@ fuction updateTweets(text) {
 function tweetsHtml (tweets) {
     const listEl = document.getElementById("tweets");
     const list = tweets.map ((tweet) => {
-        return `<li> ${tweet.
-        }}`
-    })
+        return `<li> ${tweet.text}</li>`;
+    }).join("");
+
+    listEl.innerHTML = list;
 }
 
 
 
-
-
-
 // Test
-console.log(updatedTweets); // Ska logga en array utan kommentaren med id 823423
+//console.log(updatedTweets); // Ska logga en array utan kommentaren med id 823423
 // [
 //   { text: 'Elon Musk is ...', id: 523423 },
 //   { text: 'The future of AI ...', id: 2039842 },

@@ -119,13 +119,21 @@ const watchList = [
   function myWatchList(movies) {
 
     // Din kod här:
-    return movies.map(getTitleRating);
+
+  // 1️⃣ Filter movies with imdbRating >= 8.0
+  function isHighRated(movie) {
+    return movie.imdbRating >= 8.0;
   }
-  function getTitleRating(movie) {
-    const title = watchList.title;
-    const rating = watchList.rating; 
-    return `${title} ${rating}`;
+
+  const filtered = movies.filter(isHighRated);
+
+  // 2️⃣ Map to objects with title and rating
+  function toTitleRating(movie) {
+    return { title: movie.Title, rating: movie.imdbRating };
   }
+
+  return filtered.map(toTitleRating);
+}
 
   // Test 
   console.log(myWatchList(watchList)); // Ska logga: [{ title: "Inception", rating: "8.8" }, { title: "Interstellar", rating: "8.6" }, { title: "The Dark Knight", rating: "9.0" }, { title: "Batman Begins", rating: "8.3" }]

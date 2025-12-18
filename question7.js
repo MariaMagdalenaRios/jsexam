@@ -8,9 +8,20 @@
 // Din kod här:
 async function getPost() {
 	
-	const listPostEl = document.getElementById("post");
+	const listPostEl = document.getElementById("posts");
 	const response = await fetch ("https://jsonplaceholder.typicode.com/posts");
 	const data = await response.json();
+
+	// Filter: visa bara posts med userId 1
+	const userPost = data.filter(post =>post.userId ===1);
+
+    // Skapa HTML-lista
+    const list = userPosts.map(post => {
+      return `<li><strong>${post.title}</strong><br>${post.body}</li>`;
+    }).join("");
+
+    listPostEl.innerHTML = list;
+
 
 }
  getPost()

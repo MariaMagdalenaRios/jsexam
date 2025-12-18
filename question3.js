@@ -5,14 +5,17 @@
 
 function findMax(array) {
     // Din kod här:
-    
-   return array.filter(function (max) {
-    return max.num >= 9;
-   }); 
-   
+  let biggest = array[0];
+
+  for (let num of array) {
+    if (num > biggest) {
+      biggest = num;
+    }
+  }
+  
+  return biggest;
 }
 
-const num = [3, 1, 9, 4];
 
 
 //console.log(findMax([3, 1, 9, 4])); // Ska logga 9
