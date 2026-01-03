@@ -122,7 +122,7 @@ const watchList = [
 
   // 1️⃣ Filter movies with imdbRating >= 8.0
   function isHighRated(movie) {
-    return movie.imdbRating >= 8.0;
+    return Number(movie.imdbRating) >= 8.0;
   }
 
   const filtered = movies.filter(isHighRated);
