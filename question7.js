@@ -7,21 +7,23 @@
 
 // Din kod här:
 async function getPost() {
-	
-	const listPostEl = document.getElementById("posts");
-	const response = await fetch ("https://jsonplaceholder.typicode.com/posts");
-	const data = await response.json();
+	try {
+		const listPostEl = document.getElementById("posts");
+		const response = await fetch ("https://jsonplaceholder.typicode.com/posts");
+		const data = await response.json();
 
 	// Filter: visa bara posts med userId 1
-	const userPost = data.filter(post =>post.userId ===1);
+	const userPosts = data.filter(post =>post.userId ===1);
 
     // Skapa HTML-lista
     const list = userPosts.map(post => {
-      return `<li><strong>${post.title}</strong><br>${post.body}</li>`;
+      return `<li>${post.title}<br>${post.body}</li>`;
     }).join("");
 
     listPostEl.innerHTML = list;
-
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+  }
 
 }
  getPost()
