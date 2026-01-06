@@ -21,9 +21,7 @@ const authors = [
 
 function getAuthorsByFullname(author) {
     // Din kod här
-    const first = author.first;
-    const last = author.last;
-    return `${first} ${last}`;
+    return `${author.first} ${author.last}`;
   };
 const fullName = authors.map(getAuthorsByFullname);
 

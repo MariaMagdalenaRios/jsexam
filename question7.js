@@ -12,15 +12,13 @@ async function getPost() {
 		const response = await fetch ("https://jsonplaceholder.typicode.com/posts");
 		const data = await response.json();
 
-	// Filter: visa bara posts med userId 1
-	const userPosts = data.filter(post =>post.userId ===1);
+	  // Filter: visa bara posts med userId 1
+	  const userPosts = data.filter((post) => post.userId === 1);
 
     // Skapa HTML-lista
-    const list = userPosts.map(post => {
-      return `<li>${post.title}<br>${post.body}</li>`;
-    }).join("");
-
+    const list = userPosts.map(post => `<li>${post.title}<br>${post.body}</li>`).join("");
     listPostEl.innerHTML = list;
+    
   } catch (error) {
     console.error("Error fetching posts:", error);
   }

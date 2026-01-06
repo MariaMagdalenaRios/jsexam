@@ -10,12 +10,7 @@ const tweets = [
   ];
 
 // Din kod här:
-function updateTweets(tweets) {
-    return tweets.filter (function (tweet) {
-        return tweets.id !== 823423;
-    });
-}
-const updatedTweets = updateTweets(tweets);
+const updatedTweets = tweets.filter(tweet => tweet.id !== 823423);
 
 
 
@@ -28,10 +23,7 @@ const updatedTweets = updateTweets(tweets);
 // Din kod här:
 function tweetsHtml (tweets) {
     const listEl = document.getElementById("tweets");
-    const list = tweets.map ((tweet) => {
-        return `<li> ${tweet.text}</li>`;
-    }).join("");
-
+    const list = tweets.map ((tweet) => `<li> ${tweet.text}</li>`).join("");
     listEl.innerHTML = list;
 }
 

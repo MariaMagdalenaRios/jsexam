@@ -18,12 +18,12 @@ export class Student {
     this.courses = [];
   }
 
-  // Add a course object to the courses array
+  // Metoder: Add a course object to the courses array
   registerCourse(course) {
     this.courses.push(course);
   }
 
-  // Return the list of courses
+  // Metoder: Return the list of courses
   listCourses() {
     return this.courses;
   }
